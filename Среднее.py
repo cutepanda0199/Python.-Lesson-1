@@ -1,4 +1,5 @@
 import pandas
+
 data = pandas.read_csv('crops_usa.csv')
 
 # преобразуем столбцы датасета в списки
@@ -42,4 +43,6 @@ print(sum(error_abs_acres) / len(error_abs_acres)) # MAE первой модел
 error_abs_yield = []
 for index in error_yield:
     error_abs_yield.append(abs(index))
+    
+# Сумма / Длина
 print(sum(error_abs_yield) / len(error_abs_yield))

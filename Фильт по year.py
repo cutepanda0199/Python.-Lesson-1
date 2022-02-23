@@ -1,4 +1,5 @@
 import pandas
+
 data = pandas.read_csv('crops_usa.csv')
 
 # преобразуем Acres, Year и State в списки

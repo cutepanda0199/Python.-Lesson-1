@@ -1,7 +1,7 @@
-Для первой стратегии:
-
-
+#Для первой стратегии:
 import pandas
+import seaborn
+
 data = pandas.read_csv('crops_usa.csv')
 
 acres = list(data['Acres'])
@@ -32,17 +32,12 @@ error_acres = []
 for index in range(1, len(acres_usa)):
     error_acres.append(production_usa[index] - acres_usa[index] * yield_usa[index - 1] )
 
-import seaborn
 seaborn.barplot(x = years_numbers[1:], y = error_acres)
 
-
-
-
-
-Для второй стратегии:
-
-
+#Для второй стратегии:
 import pandas
+import seaborn
+
 data = pandas.read_csv('crops_usa.csv')
 
 acres = list(data['Acres'])
@@ -73,5 +68,4 @@ error_yield = []
 for index in range(1, len(acres_usa)):
     error_yield.append(production_usa[index] - acres_usa[index - 1] * yield_usa[index])
     
-import seaborn
 seaborn.barplot(x = years_numbers[1:], y = error_yield)
